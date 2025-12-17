@@ -7,6 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "build:ssr": "ng build && ng run Angular_ToDoList:server",
+    "prerender": "ng run Angular_ToDoList:prerender",
     "serve:ssr:Angular_ToDoList": "node dist/Angular_ToDoList/server/server.mjs"
   },
   "prettier": {
