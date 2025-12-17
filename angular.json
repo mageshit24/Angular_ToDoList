@@ -26,12 +26,7 @@
             ],
             "styles": [
               "src/styles.css"
-            ],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            ]
           },
           "configurations": {
             "production": {
@@ -71,36 +66,6 @@
         },
         "test": {
           "builder": "@angular/build:unit-test"
-        },
-        "server": {
-          "builder": "@angular/build:ssr",
-          "options": {
-            "outputPath": "dist/Angular_ToDoList/server",
-            "main": "src/main.server.ts",
-            "tsConfig": "tsconfig.server.json"
-          },
-          "configurations": {
-            "production": {
-              "optimization": true,
-              "sourceMap": false,
-              "extractLicenses": true
-            },
-            "development": {
-              "optimization": false,
-              "sourceMap": true
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "prerender": {
-          "builder": "@angular/build:prerender",
-          "options": {
-            "browserTarget": "Angular_ToDoList:build:production",
-            "serverTarget": "Angular_ToDoList:server:production",
-            "routes": [
-              "/"
-            ]
-          }
         }
       }
     }
