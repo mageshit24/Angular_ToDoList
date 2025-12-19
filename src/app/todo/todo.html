@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container"> 
   <div class="todo-card">
 
     <h2>{{ title }}</h2>
@@ -19,23 +19,32 @@
         <p *ngIf="task.done">Task Completed</p>
 
         <!-- ngClass directive -->
-        <p [ngClass]="{completed: task.done}">
+        <p [ngClass]="{completed: task.done}" *ngIf="!task.editing">
           {{ task.name }}
         </p>
+
+        <!-- Edit input -->
+        <input *ngIf="task.editing" [(ngModel)]="task.name" />
 
         <!-- ngStyle directive -->
         <p [ngStyle]="{color: task.done ? 'green' : 'red'}">
           Status : {{ task.done ? 'Done' : 'Not Done' }}
         </p>
 
-        <button *ngIf="!task.done"
-                class="done"
-                (click)="markDone(task)">
+        <!-- Action Buttons -->
+        <button *ngIf="!task.done && !task.editing" class="done" (click)="markDone(task)">
           Mark Done
         </button>
 
-        <button class="delete"
-                (click)="deleteTask(i)">
+        <button *ngIf="!task.editing" class="edit" (click)="editTask(task)">
+          Edit
+        </button>
+
+        <button *ngIf="task.editing" class="save" (click)="saveTask(task)">
+          Save
+        </button>
+
+        <button class="delete" (click)="deleteTask(i)">
           Delete
         </button>
 

@@ -1,3 +1,4 @@
+/* Container */
 .container {
   min-height: calc(100vh - 16px);
   box-sizing: border-box;
@@ -10,6 +11,7 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
+/* Card */
 .todo-card {
   background: white;
   width: 420px;
@@ -21,11 +23,13 @@
   flex-direction: column;
 }
 
+/* Heading */
 h2 {
   text-align: center;
   color: #4a4a4a;
 }
 
+/* Input Section */
 .input-section {
   display: flex;
   gap: 10px;
@@ -37,8 +41,16 @@ input {
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
 }
 
+input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+/* Buttons */
 button {
   border: none;
   padding: 8px 12px;
@@ -47,8 +59,34 @@ button {
   background: #667eea;
   color: white;
   margin-right: 5px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
 }
 
+button:hover {
+  opacity: 0.9;
+}
+
+/* Specific Button Styles */
+.done {
+  background: #4caf50;
+}
+
+.delete {
+  background: #f44336;
+}
+
+.edit {
+  background: #ffc107;
+  color: #fff;
+}
+
+.save {
+  background: #2196f3;
+  color: #fff;
+}
+
+/* Task List */
 ul {
   list-style: none;
   padding: 0;
@@ -62,17 +100,33 @@ li {
   margin-bottom: 12px;
   padding: 12px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
+/* Completed Task */
 .completed {
   text-decoration: line-through;
   color: gray;
 }
 
-.done {
-  background: #4caf50;
+/* Task Editing Input */
+li input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
 }
 
-.delete {
-  background: #f44336;
+li input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 4px rgba(102, 126, 234, 0.5);
+}
+
+/* Action Buttons Container */
+li button {
+  flex: 1;
+  margin-top: 5px;
 }

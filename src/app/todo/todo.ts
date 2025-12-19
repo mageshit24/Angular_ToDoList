@@ -13,15 +13,16 @@ export class Todo {
   title = 'ToDo Application';
   taskName: string = '';
   tasks: any[] = [
-    { name: 'Angular Mini Project', done: false},
-    { name: 'Mini Project Demo', done: false}
+    { name: 'Angular Mini Project', done: false, editing: false },
+    { name: 'Mini Project Demo', done: false, editing: false }
   ];
 
   addTask() {
     if(this.taskName.trim() !== '') {
       this.tasks.push({
         name: this.taskName,
-        done: false
+        done: false,
+        editing: false
       });
       this.taskName = '';
     }
@@ -33,5 +34,13 @@ export class Todo {
 
   deleteTask(index: number) {
     this.tasks.splice(index, 1);
+  }
+
+  editTask(task: any) {
+    task.editing = true;
+  }
+
+  saveTask(task: any) {
+    task.editing = false;
   }
 }
