@@ -58,7 +58,6 @@ button {
   cursor: pointer;
   background: #667eea;
   color: white;
-  margin-right: 5px;
   font-weight: 500;
   transition: all 0.2s ease-in-out;
 }
@@ -67,7 +66,7 @@ button:hover {
   opacity: 0.9;
 }
 
-/* Specific Button Styles */
+/* Specific Buttons */
 .done {
   background: #4caf50;
 }
@@ -101,8 +100,23 @@ li {
   padding: 12px;
   border-radius: 10px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Task Content (Left) */
+.task-content {
+  display: flex;
   flex-direction: column;
+  gap: 4px;
+  max-width: 60%;
+}
+
+/* Task Actions (Right) */
+.task-actions {
+  display: flex;
   gap: 6px;
+  flex-shrink: 0;
 }
 
 /* Completed Task */
@@ -111,22 +125,17 @@ li {
   color: gray;
 }
 
-/* Task Editing Input */
+/* Edit Input inside li */
 li input {
   padding: 8px;
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 14px;
   outline: none;
+  width: 100%;
 }
 
 li input:focus {
   border-color: #667eea;
   box-shadow: 0 0 4px rgba(102, 126, 234, 0.5);
-}
-
-/* Action Buttons Container */
-li button {
-  flex: 1;
-  margin-top: 5px;
 }
