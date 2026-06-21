@@ -4,7 +4,7 @@ A clean, standalone **Angular** to-do list app — add tasks, mark them done, ed
 
 ## 🚀 Live Demo
 
-🔗 **[Live on Netlify](https://angulartodolistminiproject.netlify.app/)** — *replace with your actual deployed URL*
+🔗 **[Live on Netlify](https://angulartodolistminiproject.netlify.app/)**
 
 ---
 
