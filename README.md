@@ -140,7 +140,8 @@ Tasks and the light/dark theme choice are saved to the browser's `localStorage` 
 | Task List | Add / Edit Task |
 |---|---|
 | <img width="1918" height="1078" alt="Angular ToDoList task list view" src="https://github.com/user-attachments/assets/fc3a7202-b6ec-47c5-8bff-7d778614d68c" />
-| <img width="1918" height="1078" alt="Angular ToDoList add and edit task view" src="https://github.com/user-attachments/assets/baa2446a-2eb2-4422-a332-85ad63cfeb4e" /> |
+| <img width="1918" height="1078" alt="Angular ToDoList add and edit task view" src="https://github.com/user-attachments/assets/baa2446a-2eb2-4422-a332-85ad63cfeb4e" />
+|
 
 ---
 
@@ -163,4 +164,4 @@ Tasks and the light/dark theme choice are saved to the browser's `localStorage` 
 
 ## 📄 License
 
-This project is open source — feel free to use, modify, and build on it. Consider adding a `LICENSE` file (e.g. MIT) to make the terms explicit.
+This project is open source - feel free to use, modify, and build on it. Consider adding a `LICENSE` file (e.g. MIT) to make the terms explicit.
