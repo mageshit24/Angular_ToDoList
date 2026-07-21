@@ -6,7 +6,12 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "audit:check": "npm audit --omit=dev"
+  },
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=11.0.0"
   },
   "prettier": {
     "printWidth": 100,
@@ -21,7 +26,7 @@
     ]
   },
   "private": true,
-  "packageManager": "npm@11.3.0",
+  "packageManager": "npm@11.16.0",
   "dependencies": {
     "@angular/common": "^21.0.0",
     "@angular/compiler": "^21.0.0",
@@ -41,7 +46,7 @@
     "@angular/compiler-cli": "^21.0.0",
     "@netlify/angular-runtime": "^3.0.1",
     "@types/express": "^5.0.1",
-    "@types/node": "^20.17.19",
+    "@types/node": "^24.13.3",
     "jsdom": "^27.1.0",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"

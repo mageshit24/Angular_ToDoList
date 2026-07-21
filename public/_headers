@@ -1,0 +1,14 @@
+# Netlify security headers for the built app.
+# Docs: https://docs.netlify.com/routing/headers/
+# These are real HTTP response headers (unlike <meta> tags, which browsers
+# only honor for a subset of these) and are the actual "code exposure
+# prevention" layer for this app — the DevTools deterrent in
+# src/app/core/devtools-protection.ts is a UX nudge, not a security control.
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; frame-ancestors 'none'
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
